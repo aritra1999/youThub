@@ -1,0 +1,17 @@
+<div class="w-5/6 mx-auto">
+    <button (click)="toggleForm()" class="inline-flex font-semibold items-center bg-gray-800 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base mt-4 md:mt-0 text-white duration-200 ease-in-out">
+        Toggle Form
+    </button>
+    <div *ngIf="formType == 'linkArea'">
+        <label for="linkArea" class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center text-white my-3 inline-block">Drop Link</label>
+        <input type="url" class="w-full bg-zinc-800 border-zinc-800 px-6 py-4 rounded border-2  focus:border-blue-600 focus:ring-3 focus:ring-blue-400 text-base outline-none text-white resize-none leading-6 transition-colors duration-200 ease-in-out">
+    </div>
+    <div *ngIf="formType == 'textArea'">
+        <label for="linkArea" class="font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center text-white my-3 inline-block">Add Text</label>
+        <textarea class="w-full bg-zinc-800 border-zinc-800 px-6 py-4 rounded border-2 focus:border-blue-600 focus:ring-3 focus:ring-3 blue-400 h-96 text-base outline-none text-white resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+    </div>
+    <button (click)="submit()" class="flex items-center justify-center font-semibold bg-gray-800 border-0 py-2 px-4 focus:outline-none hover:bg-blue-600 rounded text-base mt-4 md:mt-0 text-white duration-200 ease-in-out">
+        Analyze
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-6 h-6 ml-2" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="m344 280l88-88m-200 24l64 64M80 320l104-104"></path><circle cx="456" cy="168" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle><circle cx="320" cy="304" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle><circle cx="208" cy="192" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle><circle cx="56" cy="344" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle></svg>
+    </button>
+</div>
